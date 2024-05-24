@@ -26,8 +26,8 @@
   </script>
 </head>
 <body class="font-montserrat">
-  <header class="h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
-    <div class="flex-none w-full px-6 flex justify-between mt-2">
+  <header class="md:h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
+    <div class="flex-none w-full px-6 md:flex justify-between mt-2 hidden">
       <div class="flex items-center gap-x-1 mr-2">
         <img src="./icons/smartphone.png" alt="smartphone-icon" class="h-5">
         <a href="#" class="text-sm text-white hover:text-gray-300">Donwload Lashodia App</a>
@@ -39,13 +39,13 @@
         <a href="#" class="text-sm text-white hover:text-gray-300">Promo</a>
       </div>
     </div>
-    <div class="flex-none w-full flex items-center gap-x-12 px-6">
+    <div class="flex-none w-full flex items-center md:gap-x-12 md:px-6 px-2">
       <div class="flex-none">
-        <h1 class="font-extrabold text-white text-3xl hover:cursor-pointer">Lashodia.</h1>
+        <h1 class="font-extrabold text-white text-3xl hover:cursor-pointer hidden md:block">Lashodia.</h1>
       </div>
       <div class="flex-1 min-w-32">
-        <div class="w-full border border-solid border-slate-300 rounded-2xl h-10 flex items-center overflow-hidden">
-          <div class="flex-none h-full bg-white">
+        <div class="w-full border border-solid border-slate-300 rounded-2xl h-10 flex items-center overflow-hidden scale-">
+          <div class="flex-none h-full bg-white hidden md:block">
             <img src="./icons/search.png" alt="search-icon" class="h-3/4 mt-1 mx-4">
           </div>
           <div class="flex-1 h-full">
@@ -53,27 +53,28 @@
           </div>
         </div>
       </div>
-      <div class="flex-none grid grid-cols-3">
-        <div class="p-4 relative">
-          <img class="h-8 hover:cursor-pointer" src="./icons/cart.png" alt="cart-icon">
+      <div class="grid grid-cols-3">
+        <div class="py-5 px-1  md:p-4 relative">
+          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/cart.png" alt="cart-icon">
           <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">8</div>
         </div>
-        <div class="p-4 relative">
-          <img class="h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
+        <div class="py-5 px-1 md:p-4 relative">
+          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
           <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">11</div>
         </div>
-        <div class="p-4 relative">
-          <img class="h-8 hover:cursor-pointer" src="./icons/email.png" alt="email-icon">
+        <div class="py-5 px-1 md:p-4 relative">
+          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/email.png" alt="email-icon">
           <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
         </div>
       </div>
       <div class="flex-none">
-        <button class="bg-white text-green-700 px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400">
+        <button class="bg-white text-green-700 px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400 hidden md:block">
             Log In
         </button>
+        <button class="bg-green-800 my-1 mx-3 p-2 rounded md:hidden"><img class="h-7" src="./icons/hamburger-menu.png" alt=""></button>
       </div>
     </div>
-    <div class="flex-none w-full flex gap-x-4 px-6">
+    <div class="flex-none w-full md:flex gap-x-4 px-6 hidden">
       <a href="#" class="text-sm text-white hover:text-gray-300">Today's Deals</a>
       <a href="#" class="text-sm text-white hover:text-gray-300">Men</a>
       <a href="#" class="text-sm text-white hover:text-gray-300">Woman</a>
@@ -84,8 +85,8 @@
     </div>
     
   </header>
-  <section class="w-full h-[400px] bg-gray-300/20 mt-[124px] flex items-center ">
-    <div class="w-[650px] h-[86%] mx-auto rounded-2xl overflow-hidden relative">
+  <section class="w-full h-[260px] min-[433px]:h-[380px] md:h-[400px] bg-gray-700/20 mt-[72px] md:mt-[124px] flex items-center ">
+    <div class="w-[650px] md:h-[86%] mx-auto rounded-2xl overflow-hidden relative">
       <div class="mySlides h-full hidden">
         <img src="./images/ads-1.jpg" alt="ads-image" class="h-full w-full">
       </div>
