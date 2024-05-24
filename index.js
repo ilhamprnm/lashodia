@@ -9,7 +9,6 @@ fetch('https://fakestoreapi.com/products')
     products = json;
     console.log(products);
     products.forEach((product) => {
-
       productsHTML += `
       <div class="w-52 h-full rounded-2xl overflow-hidden shrink-0 shadow-all-side cursor-pointer product-cont">
         <div class="w-full h-3/5 p-4">
@@ -89,17 +88,24 @@ function nextProduct() {
 
   const productCont = document.querySelectorAll('.product-cont');
 
-  if (productIndex <= 0 ) {
-    productIndex -= 50;
+  if (productIndex <= 224) {
+    productIndex -= 224;
   }
 
-  if (productIndex < -260) {
-    productIndex = -260;
+  if (productIndex < -4256 && window.innerWidth < 495 )  {
+    productIndex = -4256;
+  } else if (productIndex <= -4032 && window.innerWidth >= 495 && window.innerWidth <= 720) {
+    productIndex = -4032;
+  } else if (productIndex < -3808 && window.innerWidth > 720 && window.innerWidth <= 1028 ) {
+    productIndex = -3808;
+  } else if (productIndex < -3584 && window.innerWidth > 1028) {
+    productIndex = -3584
   }
   
+  
   productCont.forEach((product) => {
-    product.style.transform = `translate(${productIndex}vw)`;
-    product.style.transitionDuration = "1s";
+    product.style.transform = `translate(${productIndex}px)`;
+    product.style.transitionDuration = "0.5s";
   });
   
   
@@ -109,7 +115,7 @@ function nextProduct() {
 function prevProduct() {
   const productCont = document.querySelectorAll('.product-cont');
   if (productIndex  < 0) {
-    productIndex += 50;
+    productIndex += 224;
   } 
 
   if (productIndex > 0) {
@@ -118,15 +124,11 @@ function prevProduct() {
   
 
   productCont.forEach((product) => {
-    product.style.transform = `translate(${productIndex}vw)`;
+    product.style.transform = `translate(${productIndex}px)`;
   });
 
   console.log(productIndex);
 }
-
-
-
-
 
 
 
