@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>Lashodia</title>
   <script>
     tailwind.config = {
       theme: {
@@ -44,27 +44,33 @@
         <h1 class="font-extrabold text-white text-3xl hover:cursor-pointer hidden md:block">Lashodia.</h1>
       </div>
       <div class="flex-1 min-w-32">
-        <div class="w-full border border-solid border-slate-300 rounded-2xl h-10 flex items-center overflow-hidden scale-">
-          <div class="flex-none h-full bg-white hidden md:block">
-            <img src="./icons/search.png" alt="search-icon" class="h-3/4 mt-1 mx-4">
-          </div>
-          <div class="flex-1 h-full">
-            <input placeholder="Search" type="text" class="h-full w-full pl-4 focus:outline-none">
-          </div>
+        <div class="border border-solid border-white rounded-2xl items-center p-1">
+            <form action="https://www.tokopedia.com/search" method="get" class="flex px-2">
+              <input name="q" placeholder="Search" type="text" class=" focus:outline-none bg-transparent text-white placeholder:text-white flex-1">
+              <button type="submit">
+                <img src="./icons/search.png" alt="search-icon">
+              </button>
+            </form>
         </div>
       </div>
       <div class="grid grid-cols-3">
-        <div class="py-5 px-1  md:p-4 relative">
-          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/cart.png" alt="cart-icon">
-          <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">8</div>
+        <div class="py-5 px-1 md:p-3 relative">
+          <div class="p-1 hover:bg-green-800 rounded">
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/cart.png" alt="cart-icon">
+            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">8</div>
+          </div>
         </div>
-        <div class="py-5 px-1 md:p-4 relative">
-          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
-          <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">11</div>
+        <div class="py-5 px-1 md:p-3 relative">
+          <div class="p-1 hover:bg-green-800 rounded"> 
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
+            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">11</div>
+          </div>
         </div>
-        <div class="py-5 px-1 md:p-4 relative">
-          <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/email.png" alt="email-icon">
-          <div class="absolute top-4 right-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
+        <div class="py-5 px-1 md:p-3 relative">
+          <div class="p-1 hover:bg-green-800 rounded">
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/email.png" alt="email-icon">
+            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
+          </div>
         </div>
       </div>
       <div class="flex-none">
