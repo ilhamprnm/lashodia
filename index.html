@@ -19,7 +19,10 @@
         boxShadow: {
           "all-side": "2px 2px 5px rgba(150, 150, 150, 0.8), -2px -2px 5px rgba(150, 150, 150, 0.8), -2px 2px 5px rgba(150, 150, 150, 0.8),2px -2px 5px rgba(150, 150, 150, 0.8) ;",
 
-          "bottom-only" : "0px 2px 6px rgba(123, 123, 123, 0.8)"
+          "bottom-only" : "0px 2px 6px rgba(123, 123, 123, 0.8)",
+
+          "notif": "1px 1px 2px rgba(150, 150, 150, 0.8), -1px -1px 2px rgba(150, 150, 150, 0.8), -1px 1px 2px rgba(150, 150, 150, 0.8), 1px -1px 2px rgba(150, 150, 150, 0.8) ;",
+
         }
       }
     }
@@ -54,22 +57,94 @@
         </div>
       </div>
       <div class="grid grid-cols-3">
-        <div class="py-5 px-1 md:p-3 relative">
+        <div class="py-5 px-1 md:p-3 relative" id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/cart.png" alt="cart-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">8</div>
           </div>
-        </div>
-        <div class="py-5 px-1 md:p-3 relative">
-          <div class="p-1 hover:bg-green-800 rounded"> 
-            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
-            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">11</div>
+          <div class="bg-blue-400 h-72 w-96 absolute -right-40 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500" id="cart-preview">
+            <div class="w-96 h-10 px-3 fixed flex items-center justify-between shadow-bottom-only">
+              <span class="font-bold text-[16px]">Cart (8)</span> <a href="#" class="text-green-700">See</a>
+            </div>
+            <div class="h-[280px] absolute top-10 ">
+              
+            </div>
           </div>
         </div>
-        <div class="py-5 px-1 md:p-3 relative">
+        <div class="py-5 px-1 md:p-3 relative" id="notification">
+          <div class="p-1 hover:bg-green-800 rounded"> 
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/notification.png" alt="notification-icon">
+            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">3</div>
+          </div>
+          <div class=" w-80 absolute -right-32 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 " id="notification-preview">
+            <div class="w-80 h-10 px-3 fixed flex items-center shadow-bottom-only bg-white rounded-t z-30 ">
+              <span class="font-bold text-[16px]">Notification (3)</span> 
+            </div>
+            <div class="bg-white absolute top-10 pb-3 rounded-b-md">
+              <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
+                <div class="flex items-center p-1">
+                  <img class="w-16" src="./icons/limited-stock.png" alt="notification-image">
+                </div>
+                <div class="w-full p-1">
+                  <div class="w-full flex justify-between text-sm pr-1">
+                    <div class="font-bold">Limited Stock !!</div>
+                    <div class="text-[0.75rem]">now</div>
+                  </div>
+                  <div>
+                    <p class="text-sm">
+                      Get it now! Limited stock, don't run out! 🎉</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
+                <div class="flex items-center p-1">
+                  <img class="w-16" src="./icons/flash-sale.png" alt="notification-image">
+                </div>
+                <div class="w-full p-1">
+                  <div class="w-full flex justify-between text-sm pr-1">
+                    <div class="font-bold">6.6 Flash sale</div>
+                    <div class="text-[0.75rem]">2h ago</div>
+                  </div>
+                  <div>
+                    <p class="text-sm">
+                      Don't miss our Flash Sale! Huge discounts only for 24 hours🚀💥</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
+                <div class="flex items-center p-2">
+                  <img class="w-16" src="./icons/free-delivery-2.png" alt="notification-image">
+                </div>
+                <div class="w-full p-1">
+                  <div class="w-full flex justify-between text-sm pr-1">
+                    <div class="font-bold">Free Delivery</div>
+                    <div class="text-[0.75rem]">3d ago</div>
+                  </div>
+                  <div>
+                    <p class="text-sm">
+                      Enjoy our special offer with Free Delivery for all orders</p>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="py-5 px-1 md:p-3 relative" id="chat">
           <div class="p-1 hover:bg-green-800 rounded">
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/email.png" alt="email-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
+          </div>
+          <div class="bg-blue-400 w-52 absolute -right-20 top-16 p-2 rounded-md -translate-y-[420px] opacity-40 duration-500" id="chat-preview">
+            <ul class="text-sm">
+              <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Chat</a></li>
+              <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Talk</a></li>
+              <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Support Message</a></li>
+              <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Order Complain</a></li>
+            </ul>
           </div>
         </div>
       </div>
