@@ -29,6 +29,8 @@
   </script>
 </head>
 <body class="font-montserrat">
+  <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
+
   <header class="md:h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
     <div class="flex-none w-full px-6 md:flex justify-between mt-2 hidden">
       <div class="flex items-center gap-x-1 mr-2">
@@ -57,26 +59,28 @@
         </div>
       </div>
       <div class="grid grid-cols-3">
-        <div class="py-5 px-1 md:p-3 relative" id="cart">
+        <div class="py-5 px-1 md:p-3 relative " id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
-            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/cart.png" alt="cart-icon">
+            <a href="Cart.html">
+              <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/cart.png" alt="cart-icon">
+            </a>
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">8</div>
           </div>
-          <div class="bg-blue-400 h-72 w-96 absolute -right-40 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500" id="cart-preview">
+          <div class="bg-blue-400 h-72 w-96 absolute -right-36 md:-right-40 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500" id="cart-preview">
             <div class="w-96 h-10 px-3 fixed flex items-center justify-between shadow-bottom-only">
               <span class="font-bold text-[16px]">Cart (8)</span> <a href="#" class="text-green-700">See</a>
             </div>
             <div class="h-[280px] absolute top-10 ">
               
             </div>
-          </div>
+          </div> 
         </div>
         <div class="py-5 px-1 md:p-3 relative" id="notification">
           <div class="p-1 hover:bg-green-800 rounded"> 
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/notification.png" alt="notification-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">3</div>
           </div>
-          <div class=" w-80 absolute -right-32 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 " id="notification-preview">
+          <div class=" w-80 absolute -right-24 md:-right-32 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 " id="notification-preview">
             <div class="w-80 h-10 px-3 fixed flex items-center shadow-bottom-only bg-white rounded-t z-30 ">
               <span class="font-bold text-[16px]">Notification (3)</span> 
             </div>
@@ -138,7 +142,7 @@
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/email.png" alt="email-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
           </div>
-          <div class="bg-white w-52 absolute -right-20 top-16 p-2 rounded-md -translate-y-[420px] opacity-40 duration-500" id="chat-preview">
+          <div class="bg-white w-52 absolute -right-14 md:-right-20 top-16 p-2 rounded-md -translate-y-[420px] opacity-40 duration-500" id="chat-preview">
             <ul class="text-sm">
               <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Chat</a></li>
               <li class="hover:bg-slate-500 hover:cursor-pointer rounded"><a href="#">Talk</a></li>
@@ -148,11 +152,49 @@
           </div>
         </div>
       </div>
-      <div class="flex-none">
-        <button class="bg-white text-green-700 px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400 hidden md:block">
+      <div class="flex-none ">
+        <button class="bg-white text-green-700 font-bold px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400 hidden md:block">
             Log In
         </button>
-        <button class="bg-green-800 my-1 mx-3 p-2 rounded md:hidden"><img class="h-4" src="./icons/header/hamburger-menu.png" alt=""></button>
+        <button class="bg-green-800 my-1 mx-3 p-2 rounded md:hidden" onclick="menuToggle()"><img class="h-4" src="./icons/header/hamburger-menu.png" alt="hamburger-menu"></button>
+
+        <div class="hidden" id="menu">
+          <div class=" fixed left-0 right-0 top-0 bottom-0 h-full w-[100vw] bg-white z-30 flex flex-col overflow-y-scroll">
+            <div class="py-4 border-b-8 border-gray-300">
+              <div>
+                <button class="bg-slate-400 my-1 mx-3 p-2 rounded md:hidden" onclick="closeToggle()"><img class="h-4" src="./icons/header/close.png" alt="close-menu"></button>
+              </div>
+            </div>
+            <div class="py-4 border-b-8 border-gray-300">
+              <button class="bg-slate-200  font-bold px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400 mx-3">
+                Log In
+              </button>
+            </div>
+            <div class="py-4 border-b-8 border-gray-300">
+              <h3 class="text-2xl font-bold mx-3">Menu</h3>
+              <ul class="mx-6">
+                <li class="pt-2 hover:text-green-600" ><a href="#">About Lashodia</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Lashodia Partners</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Seller Education Center</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Promo</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Download Lashodia App</a></li>
+              </ul>
+            </div>
+            <div class="py-4 border-b-8 border-gray-300">
+              <h3 class="text-2xl font-bold mx-3">Category</h3>
+              <ul class="mx-6">
+                <li class="pt-2 hover:text-green-600" ><a href="#">Today's Deals</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Men</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Woman</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Kids</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Baby</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Electronics</a></li>
+                <li class="pt-2 hover:text-green-600" ><a href="#">Toys</a></li>
+              </ul>
+            </div>          
+            
+          </div>
+        </div>  
       </div>
     </div>
     <div class="flex-none w-full md:flex gap-x-4 px-6 hidden">
@@ -166,6 +208,10 @@
     </div>
   </header>
 
+  <section class="w-full mt-[124px] py-6 px-32" id="product-display">
   
+  </section>
+
+  <script src="./Product.js" type="module"></script>
 </body>
 </html>

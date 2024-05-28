@@ -32,6 +32,7 @@
   <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
 
   <header class="md:h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
+    <!-- MENU BAR TOP -->
     <div class="flex-none w-full px-6 md:flex justify-between mt-2 hidden">
       <div class="flex items-center gap-x-1 mr-2">
         <img src="./icons/header/smartphone.png" alt="smartphone-icon" class="h-5">
@@ -44,6 +45,8 @@
         <a href="#" class="text-sm text-white hover:text-gray-300">Promo</a>
       </div>
     </div>
+
+    <!-- MENU BAR MID -->
     <div class="flex-none w-full flex items-center md:gap-x-12 md:px-6 px-2">
       <div class="flex-none">
         <a href="index.html" class="font-extrabold text-white text-3xl hover:cursor-pointer hidden md:block">Lashodia.</a>
@@ -58,7 +61,9 @@
             </form>
         </div>
       </div>
+
       <div class="grid grid-cols-3">
+        <!-- CART BUTTON -->
         <div class="py-5 px-1 md:p-3 relative " id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
             <a href="Cart.html">
@@ -75,6 +80,8 @@
             </div>
           </div> 
         </div>
+
+        <!-- NOTIFICATION BUTTON -->
         <div class="py-5 px-1 md:p-3 relative" id="notification">
           <div class="p-1 hover:bg-green-800 rounded"> 
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/notification.png" alt="notification-icon">
@@ -137,6 +144,7 @@
           </div>
         </div>
 
+        <!-- CHAT BUTTON -->
         <div class="py-5 px-1 md:p-3 relative" id="chat">
           <div class="p-1 hover:bg-green-800 rounded">
             <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/email.png" alt="email-icon">
@@ -197,6 +205,8 @@
         </div>  
       </div>
     </div>
+
+    <!-- MENU BAR BOTTOM -->
     <div class="flex-none w-full md:flex gap-x-4 px-6 hidden">
       <a href="#" class="text-sm text-white hover:text-gray-300">Today's Deals</a>
       <a href="#" class="text-sm text-white hover:text-gray-300">Men</a>
@@ -206,9 +216,9 @@
       <a href="#" class="text-sm text-white hover:text-gray-300">Electronics</a>
       <a href="#" class="text-sm text-white hover:text-gray-300">Toys</a>
     </div>
-    
   </header>
 
+  <!-- ADS SECTION -->
   <section class="w-full h-[260px] min-[433px]:h-[380px] md:h-[400px] bg-gray-700/20 mt-[72px] md:mt-[124px] flex items-center ">
     <div class="w-[650px] md:h-[86%] mx-auto rounded-2xl overflow-hidden relative">
       <div class="mySlides h-full hidden">
@@ -226,6 +236,7 @@
     </div>
   </section>
 
+  <!-- PRODUCT SLIDER SECTION -->
   <section class="w-full h-[400px] flex items-center justify-center relative shadow-bottom-only">
     <div class="w-full h-[340px] border-none flex gap-x-4 overflow-hidden rounded-2xl p-2 md:mx-14 mx-4" id="js-product">
        
@@ -234,6 +245,7 @@
     <a class="absolute top-[40%] right-0 md:right-[30px] px-5 py-3 md:px-6 md:py-4 bg-gray-200 text-white rounded-full cursor-pointer hover:bg-gray-400" onclick="nextProduct()">&#10095</a>
   </section>
 
+  <!-- INFORMATION SECTION -->
   <section class="w-full flex items-center shadow-bottom-only">
     <div class="w-full flex flex-col md:flex-row items-center justify-center p-3 my-5">
       <div class="h-full w-[300px] p-4 m-5 rounded-2xl flex flex-col items-center text-center gap-y-3 shadow-all-side">
@@ -251,6 +263,7 @@
     </div>
   </section>
 
+  <!-- PRODUCT SECTION -->
   <section class="w-full p-8 md:p-20 shadow-bottom-only">
     <div class="grid grid-cols-1 min-[350px]:grid-cols-2 min-[700px]:grid-cols-3 min-[900px]:grid-cols-4 min-[1100px]:grid-cols-5 gap-4" id="js-products-below">
 
@@ -260,7 +273,8 @@
     </div>
   </section>
 
-  <section class=" w-full h-[400px] p-4">
+  <!-- FOOTER SECTION -->
+  <footer class=" w-full h-[400px] p-4">
     <div class="flex flex-wrap">
       <div class="w-1/2 sm:w-1/3 lg:w-1/4 p-4">
         <div class="font-bold text-[14px] mb-2">Customer Service</div>
@@ -314,7 +328,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </footer>
+
   <script src="./index.js"></script>
 </body>
 </html>

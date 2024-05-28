@@ -86,7 +86,7 @@ fetch('https://fakestoreapi.com/products')
     console.log(products);
     products.forEach((product) => {
       productsHTML += `
-      <div class="w-52 h-full rounded-2xl overflow-hidden shrink-0 shadow-all-side cursor-pointer product-cont">
+      <div class="w-52 h-full rounded-2xl overflow-hidden shrink-0 shadow-all-side cursor-pointer product-cont" onclick="productClick(${product.id})">
         <div class="w-full h-3/5 p-4">
           <img class="h-full mx-auto" src="${product.image}" alt="product-image">
         </div>
@@ -105,7 +105,7 @@ fetch('https://fakestoreapi.com/products')
       ` ;
 
       productsBelow += `
-      <div class="w-full h-[250px] p-4 shadow-all-side rounded-xl cursor-pointer">
+      <div class="w-full h-[250px] p-4 shadow-all-side rounded-xl cursor-pointer" onclick="productClick(${product.id})">
         <div class="w-full h-3/5 px-2">
           <img class="h-full mx-auto" src="${product.image}" alt="product-image">
         </div>
@@ -158,16 +158,16 @@ setInterval(function() {
 }
 , 2000)
 
-// Products slider
 
+// Products slider
 let  productIndex = 0;
 
 function nextProduct() {
 
   const productCont = document.querySelectorAll('.product-cont');
 
-  if (productIndex <= 224) {
-    productIndex -= 224;
+  if (productIndex <= 448) {
+    productIndex -= 448;
   }
 
   if (productIndex < -4256 && window.innerWidth < 495 )  {
@@ -193,7 +193,7 @@ function nextProduct() {
 function prevProduct() {
   const productCont = document.querySelectorAll('.product-cont');
   if (productIndex  < 0) {
-    productIndex += 224;
+    productIndex += 448;
   } 
 
   if (productIndex > 0) {
@@ -209,4 +209,12 @@ function prevProduct() {
 }
 
 
+// Product to its page
+
+function productClick(id) {
+  const productId = id 
+  sessionStorage.setItem('productId', JSON.stringify(productId));
+
+  window.location.href = "Product.html";
+}
 
