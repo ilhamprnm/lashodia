@@ -1,3 +1,9 @@
+import {cart, saveToStorage, loadFromStorage, loadAmount} from './Cart.js'
+
+
+
+loadFromStorage();
+loadAmount()
 // Header Icon
 
 const cartElement = document.getElementById('cart');
@@ -112,13 +118,13 @@ fetch("https://fakestoreapi.com/products")
               <div class="flex items-center gap-x-4">
                 <div>
                   <div class="flex items-center rounded border border-green-500">
-                    <a href=""><img class=" m-1" src="./icons/cart/minus.png" alt=""></a>
-                    <input class="w-10 h-full focus:outline-none" type="text">
-                    <a href=""><img  class=" m-1" src="./icons/cart/plus.png" alt=""></a>
+                    <a><img class=" m-1 hover:cursor-pointer" src="./icons/cart/minus.png" alt="minus-button" id="minus-button"></a>
+                    <input class="w-10 h-full focus:outline-none text-end pl-1 pr-2" type="text" max="999" min="1" value="1" text-end id="amount-input">
+                    <a><img  class=" m-1 hover:cursor-pointer" src="./icons/cart/plus.png" alt="plus-button" id="plus-button"></a>
                   </div>
                 </div>
                 <div>
-                  <button class="p-2 px-5 border bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full font-bold text-white">Add to Cart</button>
+                  <button class="p-2 px-5 border bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full font-bold text-white" id="add-to-cart">Add to Cart</button>
                 </div>
               </div>
                 <div class="flex gap-x-4 mt-5">
@@ -138,8 +144,71 @@ fetch("https://fakestoreapi.com/products")
               </div>
           </div>
         </div>
-        `
-      }
+        `;
+
+        document.getElementById('amount-input').addEventListener('input', 
+        function (e) {
+            var value = e.target.value;
+            e.target.value = value.replace(/[^0-9]/g, '');
+          });
+      
+      
+        document.getElementById('plus-button').addEventListener('click', 
+        function() {
+          // Get the input element
+          const input = document.getElementById('amount-input');
+          // Convert the input value to a number and increase it by 1
+          const currentValue = parseInt(input.value, 10);
+          if (currentValue < 999) {
+            input.value = currentValue + 1;
+          }
+        
+        });
+        
+        document.getElementById('minus-button').addEventListener('click', 
+        function() {
+          // Get the input element
+          const input = document.getElementById('amount-input');
+          // Convert the input value to a number and increase it by 1
+          const currentValue = parseInt(input.value, 10);
+          if (currentValue > 1) {
+            input.value = currentValue - 1;
+          } 
+          
+        });
+
+        document.getElementById('add-to-cart').addEventListener('click', function(){
+          const inputValue = document.getElementById('amount-input').value
+          const valueNumber = Number(inputValue);
+          
+          let matchingItem ;
+          
+          cart.forEach((cartItem) => {
+            if (cartItem.productId === product.id) {
+              matchingItem = cartItem
+            }
+          })
+
+          if (matchingItem) {
+            matchingItem.amount += valueNumber
+          } else {
+            cart.push({
+              productId: product.id,
+              title: product.title,
+              image: product.image,
+              price: product.price,
+              amount: valueNumber,
+            });
+          }
+
+          loadAmount()
+          saveToStorage();
+          console.log(cart)
+        })
+      
+        }
+       
     })
   })
 
+ 

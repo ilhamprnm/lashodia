@@ -1,3 +1,6 @@
+
+
+
 // Header Icon
 
 const cartElement = document.getElementById('cart');
@@ -75,5 +78,40 @@ function closeToggle() {
 
 // Cart 
 
-let cart = [];
+export let cart = [];
 
+export function saveToStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+export function loadFromStorage() {
+  cart = JSON.parse(localStorage.getItem('cart'))
+
+  if (!cart) {
+    cart = [{
+      productId: 1,
+      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      price: 109.95,
+      amount: 1,
+    }]
+  }
+}
+
+loadFromStorage()
+
+export function loadAmount () {
+  let totalAmount = 0 ;
+  cart.forEach((cartItem) => {
+    totalAmount += cartItem.amount
+  })
+  document.getElementById('amount-display').innerHTML = totalAmount
+  document.getElementById('cart-amount').innerHTML = `Cart (${totalAmount})`
+}
+
+loadAmount()
+
+
+cart.forEach((cartItem) => {
+  
+})

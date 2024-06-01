@@ -1,3 +1,7 @@
+import {loadAmount, loadFromStorage} from "./Cart.js"
+
+loadFromStorage()
+loadAmount()
 // Header Icon
 
 const cartElement = document.getElementById('cart');
@@ -217,4 +221,5 @@ function productClick(id) {
 
   window.location.href = "Product.html";
 }
+window.productClick = productClick
 
