@@ -1,9 +1,10 @@
-import {cart, saveToStorage, loadFromStorage, loadAmount} from './Cart.js'
+import {cart, saveToStorage, loadFromStorage, loadAmount, renderCart} from './scripts/cart.js'
 
 
 
 loadFromStorage();
-loadAmount()
+loadAmount();
+renderCart();
 // Header Icon
 
 const cartElement = document.getElementById('cart');
@@ -94,7 +95,7 @@ fetch("https://fakestoreapi.com/products")
           </div>
           <div class="flex-1 flex flex-col ">
             <div class="flex-1 flex flex-col border-b-[1px] border-black mr-3">
-              <div class="flex-1 py-3">
+              <div class="flex-1 py-3 pt-5">
                 <span class="font-bold text-2xl">${product.title}</span>
               </div>
               <div class="flex-1 flex flex-col">
@@ -102,7 +103,7 @@ fetch("https://fakestoreapi.com/products")
                 <span class="h-[72px] overflow-hidden text-ellipsis mb-1">${product.description}</span>
               </div>
               <div class="flex-1 flex items-center gap-x-8 pr-4 mb-3">
-                <div class="flex items-center ">
+                <div class="flex items-center">
                   <img class="h-4 inline me-2" src="./icons/star.png" alt="star-image">
                   <span class="text-sm">${product.rating.rate}</span>
                 </div>
@@ -119,7 +120,7 @@ fetch("https://fakestoreapi.com/products")
                 <div>
                   <div class="flex items-center rounded border border-green-500">
                     <a><img class=" m-1 hover:cursor-pointer" src="./icons/cart/minus.png" alt="minus-button" id="minus-button"></a>
-                    <input class="w-10 h-full focus:outline-none text-end pl-1 pr-2" type="text" max="999" min="1" value="1" text-end id="amount-input">
+                    <input class="w-10 h-full focus:outline-none text-end pl-1 pr-2" type="text" max="999" min="1" value="1" id="amount-input">
                     <a><img  class=" m-1 hover:cursor-pointer" src="./icons/cart/plus.png" alt="plus-button" id="plus-button"></a>
                   </div>
                 </div>
@@ -148,16 +149,16 @@ fetch("https://fakestoreapi.com/products")
 
         document.getElementById('amount-input').addEventListener('input', 
         function (e) {
-            var value = e.target.value;
+            const value = e.target.value;
             e.target.value = value.replace(/[^0-9]/g, '');
           });
       
       
         document.getElementById('plus-button').addEventListener('click', 
         function() {
-          // Get the input element
+         
           const input = document.getElementById('amount-input');
-          // Convert the input value to a number and increase it by 1
+       
           const currentValue = parseInt(input.value, 10);
           if (currentValue < 999) {
             input.value = currentValue + 1;
@@ -203,7 +204,7 @@ fetch("https://fakestoreapi.com/products")
 
           loadAmount()
           saveToStorage();
-          console.log(cart)
+          
         })
       
         }

@@ -23,6 +23,9 @@
 
           "notif": "1px 1px 2px rgba(150, 150, 150, 0.8), -1px -1px 2px rgba(150, 150, 150, 0.8), -1px 1px 2px rgba(150, 150, 150, 0.8), 1px -1px 2px rgba(150, 150, 150, 0.8) ;",
 
+          "as-thiner" : "1px 1px 1px rgba(170, 170, 170, 0.8), -1px -1px 1px rgba(170, 170, 170, 0.8), -1px 1px 1px rgba(170, 170, 170, 0.8),1px -1px 1px rgba(170, 170, 170, 0.8)"
+
+
         }
       }
     }
@@ -69,13 +72,13 @@
             <a href="Cart.html">
               <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/cart.png" alt="cart-icon">
             </a>
-            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display">8</div>
+            <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
           </div>
-          <div class="bg-blue-400 h-72 w-96 absolute -right-36 md:-right-40 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500" id="cart-preview">
-            <div class="w-96 h-10 px-3 fixed flex items-center justify-between shadow-bottom-only">
-              <span class="font-bold text-[16px]" id="cart-amount"></span> <a href="#" class="text-green-700">See</a>
+          <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 overflow-hidden overflow-y-scroll" id="cart-preview">
+            <div class="w-[450px] h-10 pl-3 pr-6 fixed flex items-center justify-between shadow-bottom-only">
+              <span class="font-bold text-[16px]" id="cart-amount"></span> <a href="Cart.html" class="text-green-700">See</a>
             </div>
-            <div class="h-[280px] absolute top-10 ">
+            <div class=" absolute top-10" id="cart-item-preview">
               
             </div>
           </div> 

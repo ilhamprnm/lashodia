@@ -1,7 +1,8 @@
-import {loadAmount, loadFromStorage} from "./Cart.js"
+import {loadAmount, loadFromStorage, renderCart} from "./scripts/cart.js"
 
-loadFromStorage()
-loadAmount()
+loadFromStorage();
+loadAmount();
+renderCart();
 // Header Icon
 
 const cartElement = document.getElementById('cart');
@@ -87,7 +88,7 @@ fetch('https://fakestoreapi.com/products')
   .then(res=>res.json())
   .then(json=> {
     products = json;
-    console.log(products);
+    
     products.forEach((product) => {
       productsHTML += `
       <div class="w-52 h-full rounded-2xl overflow-hidden shrink-0 shadow-all-side cursor-pointer product-cont" onclick="productClick(${product.id})">
@@ -155,6 +156,7 @@ function showSlides(n) {
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+window.plusSlides = plusSlides
 showSlides(slideIndex);
 
 setInterval(function() {
@@ -191,8 +193,9 @@ function nextProduct() {
   });
   
   
-  console.log(productIndex);
-}
+  
+} 
+window.nextProduct = nextProduct;
 
 function prevProduct() {
   const productCont = document.querySelectorAll('.product-cont');
@@ -209,13 +212,14 @@ function prevProduct() {
     product.style.transform = `translate(${productIndex}px)`;
   });
 
-  console.log(productIndex);
+  
 }
+window.prevProduct = prevProduct;
 
 
 // Product to its page
 
-function productClick(id) {
+export function productClick(id) {
   const productId = id 
   sessionStorage.setItem('productId', JSON.stringify(productId));
 
