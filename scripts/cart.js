@@ -55,3 +55,13 @@ export function renderCart() {
   })
 }
 
+export function totalPrice() {
+  let totalPrice = 0;
+  cart.forEach((cartItem) => {
+    const itemPrice = cartItem.price * cartItem.amount  
+    totalPrice += itemPrice ;
+  });
+  return totalPrice 
+} 
+
+

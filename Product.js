@@ -204,7 +204,7 @@ fetch("https://fakestoreapi.com/products")
 
           loadAmount()
           saveToStorage();
-          
+          renderCart();
         })
       
         }

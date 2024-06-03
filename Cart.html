@@ -30,7 +30,7 @@
     }
   </script>
 </head>
-<body class="font-montserrat">
+<body class="font-montserrat bg-gray-50">
 
   <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
 
@@ -220,7 +220,7 @@
   </header>
 
 
-  <section class="w-full h-[1000px] mt-[124px] bg-gray-50 px-4">
+  <section class="w-full my-[124px] bg-gray-50 px-4">
      <div class="h-full w-full  p-9 flex flex-col">
       <div class="text-3xl font-bold ">Cart</div>
       <div class="grid grid-cols-5 gap-x-6">
@@ -230,7 +230,28 @@
           
         </div>
         <div class="col-span-2">
+          <div class=" w-full  mt-4 rounded-lg shadow-all-side p-5" id="cart-summary-cont">
+            <div>
+              <span class="font-bold text-lg">Cart Total</span>
+            </div>
+            <div class="border-b-2 pb-2 my-2" id="cart-summary">
   
+
+            </div>
+
+            <div class="font-bold text-red-700 flex justify-between">
+              <div>
+                <span>Total :</span>
+              </div>
+              <div>
+                <span id="total-price"></span>
+              </div>
+            </div>
+            <div>
+              <button class="w-full bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full mt-4 py-2 font-bold text-white">Buy</button>
+            </div>
+         
+          </div>
         </div>
       </div>
      </div>
