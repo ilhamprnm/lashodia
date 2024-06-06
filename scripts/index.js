@@ -1,4 +1,4 @@
-import {loadAmount, loadFromStorage, renderCart} from "./scripts/cart.js"
+import {loadAmount, loadFromStorage, renderCart} from "./utility/cart.js"
 
 loadFromStorage();
 loadAmount();

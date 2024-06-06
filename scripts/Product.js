@@ -1,4 +1,4 @@
-import {cart, saveToStorage, loadFromStorage, loadAmount, renderCart} from './scripts/cart.js'
+import {cart, saveToStorage, loadFromStorage, loadAmount, renderCart} from './utility/cart.js'
 
 
 
@@ -91,9 +91,9 @@ fetch("https://fakestoreapi.com/products")
     json.forEach((product) => {
       if (product.id === productId) {
         document.getElementById('product-display').innerHTML = `
-        <div class="flex shadow-all-side rounded-2xl">
+        <div class="flex flex-col md:flex-row shadow-all-side rounded-2xl p-5">
           <div class="flex-1 flex justify-center p-10">
-            <img class="h-96 " src="${product.image}" alt="product-image">
+            <img class="sm:h-96 h-52" src="${product.image}" alt="product-image">
           </div>
           <div class="flex-1 flex flex-col ">
             <div class="flex-1 flex flex-col border-b-[1px] border-black mr-3">
