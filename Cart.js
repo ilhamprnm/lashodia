@@ -72,12 +72,14 @@ function menuToggle() {
   const menuElement = document.getElementById('menu');
   menuElement.style.display = "block"
 }
+window.menuToggle = menuToggle;
 
 // Close Menu 
 function closeToggle() {
  const menuElement = document.getElementById('menu');
  menuElement.style.display = "none"
 }
+window.closeToggle = closeToggle ;
 
 // load localStorage
 loadFromStorage()
