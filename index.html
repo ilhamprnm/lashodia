@@ -3,33 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Lashodia</title>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily : {
-            montserrat: "Montserrat, sans-serif,"
-          }
-        }, 
-        boxShadow: {
-          "all-side": "2px 2px 5px rgba(150, 150, 150, 0.8), -2px -2px 5px rgba(150, 150, 150, 0.8), -2px 2px 5px rgba(150, 150, 150, 0.8),2px -2px 5px rgba(150, 150, 150, 0.8) ;",
-
-          "bottom-only" : "0px 2px 6px rgba(123, 123, 123, 0.8)",
-
-          "notif": "1px 1px 2px rgba(150, 150, 150, 0.8), -1px -1px 2px rgba(150, 150, 150, 0.8), -1px 1px 2px rgba(150, 150, 150, 0.8), 1px -1px 2px rgba(150, 150, 150, 0.8) ;",
-
-          "as-thiner" : "1px 1px 1px rgba(170, 170, 170, 0.8), -1px -1px 1px rgba(170, 170, 170, 0.8), -1px 1px 1px rgba(170, 170, 170, 0.8),1px -1px 1px rgba(170, 170, 170, 0.8)"
-
-
-        }
-      }
-    }
-  </script>
+ 
 </head>
 <body class="font-montserrat">
   <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
@@ -69,7 +48,7 @@
         <!-- CART BUTTON -->
         <div class="py-5 px-1 md:p-3 relative " id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
-            <a href="Cart.html">
+            <a href="./src/Cart.html">
               <img class="h-7 md:h-8 hover:cursor-pointer" src="./src/icons/header/cart.png" alt="cart-icon">
             </a>
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
