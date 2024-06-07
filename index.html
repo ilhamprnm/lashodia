@@ -38,7 +38,7 @@
     <!-- MENU BAR TOP -->
     <div class="flex-none w-full px-6 md:flex justify-between mt-2 hidden">
       <div class="flex items-center gap-x-1 mr-2">
-        <img src="./icons/header/smartphone.png" alt="smartphone-icon" class="h-5">
+        <img src="./src/icons/header/smartphone.png" alt="smartphone-icon" class="h-5">
         <a href="#" class="text-sm text-white hover:text-gray-300">Donwload Lashodia App</a>
       </div>
       <div class="flex gap-x-4">
@@ -59,7 +59,7 @@
             <form action="https://www.tokopedia.com/search" method="get" class="flex px-2">
               <input name="q" placeholder="Search" type="text" class=" focus:outline-none bg-transparent text-white placeholder:text-white flex-1">
               <button type="submit">
-                <img src="./icons/header/search.png" alt="search-icon">
+                <img src="./src/icons/header/search.png" alt="search-icon">
               </button>
             </form>
         </div>
@@ -70,7 +70,7 @@
         <div class="py-5 px-1 md:p-3 relative " id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
             <a href="Cart.html">
-              <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/cart.png" alt="cart-icon">
+              <img class="h-7 md:h-8 hover:cursor-pointer" src="./src/icons/header/cart.png" alt="cart-icon">
             </a>
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
           </div>
@@ -87,7 +87,7 @@
         <!-- NOTIFICATION BUTTON -->
         <div class="py-5 px-1 md:p-3 relative" id="notification">
           <div class="p-1 hover:bg-green-800 rounded"> 
-            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/notification.png" alt="notification-icon">
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./src/icons/header/notification.png" alt="notification-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">3</div>
           </div>
           <div class=" w-80 absolute -right-24 md:-right-32 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 " id="notification-preview">
@@ -97,7 +97,7 @@
             <div class="bg-white absolute top-10 pb-3 rounded-b-md">
               <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
                 <div class="flex items-center p-1">
-                  <img class="w-16" src="./icons/header/notification/limited-stock.png" alt="notification-image">
+                  <img class="w-16" src="./src/icons/header/notification/limited-stock.png" alt="notification-image">
                 </div>
                 <div class="w-full p-1">
                   <div class="w-full flex justify-between text-sm pr-1">
@@ -113,7 +113,7 @@
 
               <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
                 <div class="flex items-center p-1">
-                  <img class="w-16" src="./icons/header/notification/flash-sale.png" alt="notification-image">
+                  <img class="w-16" src="./src/icons/header/notification/flash-sale.png" alt="notification-image">
                 </div>
                 <div class="w-full p-1">
                   <div class="w-full flex justify-between text-sm pr-1">
@@ -129,7 +129,7 @@
 
               <div class=" shadow-notif flex rounded mx-3 mt-3 hover:cursor-pointer">
                 <div class="flex items-center p-2">
-                  <img class="w-16" src="./icons/header/notification/free-delivery-2.png" alt="notification-image">
+                  <img class="w-16" src="./src/icons/header/notification/free-delivery-2.png" alt="notification-image">
                 </div>
                 <div class="w-full p-1">
                   <div class="w-full flex justify-between text-sm pr-1">
@@ -150,7 +150,7 @@
         <!-- CHAT BUTTON -->
         <div class="py-5 px-1 md:p-3 relative" id="chat">
           <div class="p-1 hover:bg-green-800 rounded">
-            <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/email.png" alt="email-icon">
+            <img class="h-7 md:h-8 hover:cursor-pointer" src="./src/icons/header/email.png" alt="email-icon">
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer">27</div>
           </div>
           <div class="bg-white w-52 absolute -right-14 md:-right-20 top-16 p-2 rounded-md -translate-y-[420px] opacity-40 duration-500" id="chat-preview">
@@ -167,13 +167,13 @@
         <button class="bg-white text-green-700 font-bold px-6 py-2 rounded-3xl hover:bg-slate-300 active:bg-slate-400 hidden md:block">
             Log In
         </button>
-        <button class="bg-green-800 my-1 mx-3 p-2 rounded md:hidden" onclick="menuToggle()"><img class="h-4" src="./icons/header/hamburger-menu.png" alt="hamburger-menu"></button>
+        <button class="bg-green-800 my-1 mx-3 p-2 rounded md:hidden" onclick="menuToggle()"><img class="h-4" src="./src/icons/header/hamburger-menu.png" alt="hamburger-menu"></button>
 
         <div class="hidden" id="menu">
           <div class=" fixed left-0 right-0 top-0 bottom-0 h-full w-[100vw] bg-white z-30 flex flex-col overflow-y-scroll">
             <div class="py-4 border-b-8 border-gray-300">
               <div>
-                <button class="bg-slate-400 my-1 mx-3 p-2 rounded md:hidden" onclick="closeToggle()"><img class="h-4" src="./icons/header/close.png" alt="close-menu"></button>
+                <button class="bg-slate-400 my-1 mx-3 p-2 rounded md:hidden" onclick="closeToggle()"><img class="h-4" src="./src/icons/header/close.png" alt="close-menu"></button>
               </div>
             </div>
             <div class="py-4 border-b-8 border-gray-300">
@@ -225,13 +225,13 @@
   <section class="w-full h-[260px] min-[433px]:h-[380px] md:h-[400px] bg-gray-700/20 mt-[72px] md:mt-[124px] flex items-center ">
     <div class="w-[650px] md:h-[86%] mx-auto rounded-2xl overflow-hidden relative">
       <div class="mySlides h-full hidden">
-        <img src="./images/ads-1.jpg" alt="ads-image" class="h-full w-full">
+        <img src="./src/images/ads-1.jpg" alt="ads-image" class="h-full w-full">
       </div>
       <div class="mySlides h-full hidden">
-        <img src="./images/ads-2.webp" alt="ads-image" class="h-full w-full">
+        <img src="./src/images/ads-2.webp" alt="ads-image" class="h-full w-full">
       </div>
       <div class="mySlides h-full hidden">
-        <img src="./images/ads-3.webp" alt="ads-image" class="h-full w-full">
+        <img src="./src/images/ads-3.webp" alt="ads-image" class="h-full w-full">
       </div>
       
       <a class="absolute top-[40%] p-4 text-white font-bold text-2xl rounded-r cursor-pointer transition-colors hover:bg-black" onclick="plusSlides(-1)">&#10094</a>
@@ -252,15 +252,15 @@
   <section class="w-full flex items-center shadow-bottom-only">
     <div class="w-full flex flex-col md:flex-row items-center justify-center p-3 my-5">
       <div class="h-full w-[300px] p-4 m-5 rounded-2xl flex flex-col items-center text-center gap-y-3 shadow-all-side">
-        <img class="w-28" src="./images/free-delivery.png" alt="free-delivery-image">
+        <img class="w-28" src="./src/images/free-delivery.png" alt="free-delivery-image">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iure ullam explicabo temporibus. Aperiam magni natus blanditiis laudantium odio!</p>
       </div>
       <div class="h-full w-[300px] p-4 m-5 rounded-2xl flex flex-col items-center text-center gap-y-3 shadow-all-side"> 
-        <img class="w-28" src="./images/product-return.png" alt="product-return-image">
+        <img class="w-28" src="./src/images/product-return.png" alt="product-return-image">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ipsa placeat et id omnis odio velit eaque necessitatibus voluptas dolor.</p>
       </div>
       <div class="h-full  w-[300px] p-4 m-5 rounded-2xl flex flex-col items-center text-center gap-y-3 shadow-all-side">
-        <img class="w-[90px] mt-2" src="./images/return.png" alt="payment-return-image">
+        <img class="w-[90px] mt-2" src="./src/images/return.png" alt="payment-return-image">
         <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ipsa placeat et id omnis odio velit eaque necessitatibus voluptas dolor.</p>
       </div>
     </div>
@@ -317,17 +317,17 @@
         <div class="font-bold text-[14px] mb-2">Follow Us</div>
         <div>
           <ul class="text-[14px]" href="#">
-            <li><a class="hover:text-green-400" href="https://www.instagram.com" target="_blank"><img class="h-4 inline mr-2" src="./icons/footer/instagram.png" alt="instagram-icon">Instagram</a></li>
-            <li><a class="hover:text-green-400" href="https://www.facebook.com" target="_blank"><img class="h-4 inline mr-2" src="./icons/footer/facebook.png" alt="facebook-icon">Facebook</a></li>
-            <li><a class="hover:text-green-400" href="https://x.com" target="_blank"><img class="h-4 inline mr-2" src="./icons/footer/x.png" alt="x-icon">X</a></li>
-            <li><a class="hover:text-green-400" href="https://www.linkedin.com" target="_blank"><img class="h-4 inline mr-2" src="./icons/footer/linkedin.png" alt="linkedin-icon">Linkedin</a></li>
+            <li><a class="hover:text-green-400" href="https://www.instagram.com" target="_blank"><img class="h-4 inline mr-2" src="./src/icons/footer/instagram.png" alt="instagram-icon">Instagram</a></li>
+            <li><a class="hover:text-green-400" href="https://www.facebook.com" target="_blank"><img class="h-4 inline mr-2" src="./src/icons/footer/facebook.png" alt="facebook-icon">Facebook</a></li>
+            <li><a class="hover:text-green-400" href="https://x.com" target="_blank"><img class="h-4 inline mr-2" src="./src/icons/footer/x.png" alt="x-icon">X</a></li>
+            <li><a class="hover:text-green-400" href="https://www.linkedin.com" target="_blank"><img class="h-4 inline mr-2" src="./src/icons/footer/linkedin.png" alt="linkedin-icon">Linkedin</a></li>
           </ul>
         </div>
       </div>
       <div class="w-3/5 sm:w-full lg:w-1/4 p-4">
-        <img class="h-44 w-44 mx-auto rounded-xl" src="./icons/footer/qr-code-iport.png" alt="qr-code">
+        <img class="h-44 w-44 mx-auto rounded-xl" src="./src/icons/footer/qr-code-iport.png" alt="qr-code">
         <div class="mt-4 flex justify-center gap-x-2">
-          <a href="#"><img class="w-28  inline" src="./icons/footer/google-play.png" alt="google-play-icon"></a><a href="#"><img class="w-28  inline" src="./icons/footer/app-store.png" alt="app-store-icon" ></a>
+          <a href="#"><img class="w-28  inline" src="./src/icons/footer/google-play.png" alt="google-play-icon"></a><a href="#"><img class="w-28  inline" src="./src/icons/footer/app-store.png" alt="app-store-icon" ></a>
         </div>
       </div>
     </div>

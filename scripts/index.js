@@ -225,7 +225,7 @@ export function productClick(id) {
   const productId = id 
   sessionStorage.setItem('productId', JSON.stringify(productId));
 
-  window.location.href = "Product.html";
+  window.location.href = "./src/Product.html";
 }
 window.productClick = productClick
 

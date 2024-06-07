@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Product</title>
+  <title>Cart</title>
   <script>
     tailwind.config = {
       theme: {
@@ -17,20 +17,21 @@
           }
         }, 
         boxShadow: {
-          "all-side": "2px 2px 5px rgba(150, 150, 150, 0.8), -2px -2px 5px rgba(150, 150, 150, 0.8), -2px 2px 5px rgba(150, 150, 150, 0.8),2px -2px 5px rgba(150, 150, 150, 0.8) ;",
+          "all-side": "2px 2px 5px rgba(150, 150, 150, 0.8), -2px -2px 5px rgba(150, 150, 150, 0.8), -2px 2px 5px rgba(150, 150, 150, 0.8),2px -2px 5px rgba(150, 150, 150, 0.8) ",
 
           "bottom-only" : "0px 2px 6px rgba(123, 123, 123, 0.8)",
 
           "notif": "1px 1px 2px rgba(150, 150, 150, 0.8), -1px -1px 2px rgba(150, 150, 150, 0.8), -1px 1px 2px rgba(150, 150, 150, 0.8), 1px -1px 2px rgba(150, 150, 150, 0.8) ;",
 
-          "as-thiner" : "1px 1px 1px rgba(170, 170, 170, 0.8), -1px -1px 1px rgba(170, 170, 170, 0.8), -1px 1px 1px rgba(170, 170, 170, 0.8),1px -1px 1px rgba(170, 170, 170, 0.8)",
+          "as-thiner" : "1px 1px 1px rgba(170, 170, 170, 0.8), -1px -1px 1px rgba(170, 170, 170, 0.8), -1px 1px 1px rgba(170, 170, 170, 0.8),1px -1px 1px rgba(170, 170, 170, 0.8)"
 
         }
       }
     }
   </script>
 </head>
-<body class="font-montserrat">
+<body class="font-montserrat bg-gray-50">
+
   <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
 
   <header class="md:h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
@@ -61,19 +62,26 @@
         </div>
       </div>
       <div class="grid grid-cols-3">
-        <div class="py-5 px-1 md:p-3 relative " id="cart">
+        <div class="py-5 px-1 md:p-3 relative" id="cart">
           <div class="p-1 hover:bg-green-800 rounded">
             <a href="Cart.html">
               <img class="h-7 md:h-8 hover:cursor-pointer" src="./icons/header/cart.png" alt="cart-icon">
             </a>
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
           </div>
+          
           <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md -translate-y-[420px] opacity-40 duration-500 overflow-hidden overflow-y-scroll" id="cart-preview">
             <div class="w-[450px] h-10 pl-3 pr-6 fixed flex items-center justify-between shadow-bottom-only">
               <span class="font-bold text-[16px]" id="cart-amount"></span> <a href="Cart.html" class="text-green-700">See</a>
             </div>
-            <div class="absolute top-10 " id="cart-item-preview">
-              
+            <div class="absolute top-10" id="cart-item-preview">
+
+             
+
+
+          
+
+             
             </div>
           </div> 
         </div>
@@ -208,12 +216,47 @@
       <a href="#" class="text-sm text-white hover:text-gray-300">Electronics</a>
       <a href="#" class="text-sm text-white hover:text-gray-300">Toys</a>
     </div>
+    
   </header>
 
-  <section class="w-full mt-[124px] py-6 px-4 lg:px-32" id="product-display">
+
+  <section class="w-full my-[124px] bg-gray-50 px-4">
+     <div class="h-full w-full  md:p-9 flex flex-col">
+      <div class="text-3xl font-bold ">Cart</div>
+      <div class="grid grid-row-2 lg:grid-cols-5 gap-x-6">
+        <div class="col-span-3" id="cart-products">
+          
+
+          
+        </div>
+        <div class="col-span-2">
+          <div class=" w-full mt-4 rounded-lg shadow-all-side p-5 " id="cart-summary-cont">
+            <div>
+              <span class="font-bold text-lg">Cart Total</span>
+            </div>
+            <div class="border-b-2 pb-2 my-2" id="cart-summary">
   
+
+            </div>
+
+            <div class="font-bold text-red-700 flex justify-between">
+              <div>
+                <span>Total :</span>
+              </div>
+              <div>
+                <span id="total-price"></span>
+              </div>
+            </div>
+            <div>
+              <button class="w-full bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full mt-4 py-2 font-bold text-white">Buy</button>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+     </div>
   </section>
 
-  <script src="./scripts//Product.js" type="module"></script>
+  <script src="./../scripts/Cart.js" type="module"></script>
 </body>
 </html>
