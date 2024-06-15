@@ -71,7 +71,7 @@
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
           </div>
           
-          <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md opacity-0 invisible duration-500 overflow-hidden overflow-y-scroll" id="cart-preview">
+          <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md opacity-0 invisible duration-500 overflow-hidden overflow-y-scroll hidden sm:block" id="cart-preview">
             <div class="w-[450px] h-10 pl-3 pr-6 fixed flex items-center justify-between shadow-bottom-only">
               <span class="font-bold text-[16px]" id="cart-amount"></span> <a href="Cart.html" class="text-green-700">See</a>
             </div>
@@ -216,9 +216,9 @@
   </header>
 
 
-  <section class="w-full my-[124px] bg-gray-50 px-4">
+  <section class="w-full mt-[76px] md:mt-[124px] bg-gray-50 px-4">
      <div class="h-full w-full  md:p-9 flex flex-col">
-      <div class="text-3xl font-bold ">Cart</div>
+      <div class="text-3xl mt-12 font-bold ">Cart</div>
       <div class="grid grid-row-2 lg:grid-cols-5 gap-x-6">
         <div class="col-span-3" id="cart-products">
           

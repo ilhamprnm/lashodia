@@ -12,10 +12,13 @@
  
 </head>
 <body class="font-montserrat">
+  
   <div class="w-full h-full fixed bg-gray-500/60 z-10 hidden" id="overlay"></div>
-
+  
   <header class="md:h-[124px] border-t-green-700 border-b-green-700 border-solid border-t-2 border-b-2 bg-green-700 flex flex-col fixed left-0 top-0 right-0 z-10">
     <!-- MENU BAR TOP -->
+  
+
     <div class="flex-none w-full px-6 md:flex justify-between mt-2 hidden">
       <div class="flex items-center gap-x-1 mr-2">
         <img src="./src/icons/header/smartphone.png" alt="smartphone-icon" class="h-5">
@@ -54,7 +57,7 @@
             </a>
             <div class="absolute top-4 right-0 md:right-2 md:top-3 bg-red-600 px-1.5 rounded-full text-sm text-white hover:cursor-pointer" id="amount-display"></div>
           </div>
-          <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md opacity-0 invisible duration-500 overflow-hidden overflow-y-scroll" id="cart-preview">
+          <div class="bg-white h-[293px] w-[450px] absolute -right-36 md:-right-48 top-16 rounded-md opacity-0 invisible duration-500 overflow-hidden overflow-y-scroll hidden sm:block" id="cart-preview">
             <div class="w-[450px] h-10 pl-3 pr-6 fixed flex items-center justify-between">
               <span class="font-bold text-[16px]" id="cart-amount"></span> <a href="./src/Cart.html" class="text-green-700">See</a>
             </div>
