@@ -5,15 +5,18 @@ loadAmount();
 renderCart();
 // Header Icon
 
+
 const cartElement = document.getElementById('cart');
 
 cartElement.addEventListener('mouseover', () => {
-  const cartPreview = document.getElementById('cart-preview');
-  cartPreview.style.visibility = "visible"
-  cartPreview.style.opacity = "1";
+  if (window.innerWidth > 760 ) {
+    const cartPreview = document.getElementById('cart-preview');
+    cartPreview.style.visibility = "visible"
+    cartPreview.style.opacity = "1";
 
-  const overlayElement = document.getElementById('overlay');
-  overlayElement.style.display = 'block'
+     const overlayElement = document.getElementById('overlay');
+    overlayElement.style.display = 'block'
+  } 
 })
 
 cartElement.addEventListener('mouseout', () => {
@@ -28,12 +31,15 @@ cartElement.addEventListener('mouseout', () => {
 const notificationElement = document.getElementById('notification');
 
 notificationElement.addEventListener('mouseover', () => {
-  const notificationPreview = document.getElementById('notification-preview');
-  notificationPreview.style.visibility = "visible"
-  notificationPreview.style.opacity = "1"
 
-  const overlayElement = document.getElementById('overlay');
-  overlayElement.style.display = 'block'
+  if (window.innerWidth > 760) {
+    const notificationPreview = document.getElementById('notification-preview');
+    notificationPreview.style.visibility = "visible"
+    notificationPreview.style.opacity = "1"
+  
+    const overlayElement = document.getElementById('overlay');
+    overlayElement.style.display = 'block'
+  }
 })
 
 notificationElement.addEventListener('mouseout', () => {
@@ -48,12 +54,14 @@ notificationElement.addEventListener('mouseout', () => {
 const chatElement = document.getElementById('chat');
 
 chatElement.addEventListener('mouseover', () => {
-  const chatPreview = document.getElementById('chat-preview');
-  chatPreview.style.visibility = "visible"
-  chatPreview.style.opacity = "1"
-
-  const overlayElement = document.getElementById('overlay');
-  overlayElement.style.display = 'block'
+  if (window.innerWidth > 760) {
+    const chatPreview = document.getElementById('chat-preview');
+    chatPreview.style.visibility = "visible";
+    chatPreview.style.opacity = "1";
+  
+    const overlayElement = document.getElementById('overlay');
+    overlayElement.style.display = 'block';
+  }
 })
 
 chatElement.addEventListener('mouseout', () => {
